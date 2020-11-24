@@ -3,7 +3,8 @@ import "./App.css";
 
 function Button(props) {
 	return (
-		<button>
+		<button className={props.name} value={props.value}>
+			{props.value}
 		</button>
 	);
 }
@@ -47,33 +48,33 @@ function App() {
 						<h1 className="output">{output}</h1>
 					</div>
 					<div id="buttons" className="button-row">
-						<Button name="number etc" onClick={handleInput} />
-						<Button name="number etc" onClick={handleInput} />
-						<Button name="number etc" onClick={handleInput} />
-						<Button name="operation" onClick={handleInput} />
+						<Button name="number etc" onClick={handleInput} value={"AC"}/>
+						<Button name="number etc" onClick={handleInput} value={"+/-"}/>
+						<Button name="number etc" onClick={handleInput} value = {"%"}/>
+						<Button name="operation" onClick={handleInput} value = {"÷"}/>
 					</div>
 					<div id="buttons" className="button-row">
-						<Button name="number" onClick={handleInput}/>
-						<Button name="number" onClick={handleInput} />
-						<Button name="number" onClick={handleInput} />
-						<Button name="operation" onClick={handleInput} />
+						<Button name="number" onClick={handleInput} value={"7"}/>
+						<Button name="number" onClick={handleInput} value={"8"}/>
+						<Button name="number" onClick={handleInput} value={"9"}/>
+						<Button name="operation" onClick={handleInput} value={"×"}/>
 					</div>
 					<div id="buttons" className="button-row">
-						<Button name="number" onClick={handleInput}/>
-						<Button name="number" onClick={handleInput}/>
-						<Button name="number" onClick={handleInput}/>
-						<Button name={"operation"} onClick={handleInput}/>
+						<Button name="number" onClick={handleInput} value={"4"}/>
+						<Button name="number" onClick={handleInput} value={"5"}/>
+						<Button name="number" onClick={handleInput} value={"6"}/>
+						<Button name={"operation"} onClick={handleInput} value={"−"}/>
 					</div>
 					<div id="buttons" className="button-row">
-						<Button name="number" onClick={handleInput} />
-						<Button name="number" onClick={handleInput}/>
-						<Button name="number" onClick={handleInput}/>
-						<Button name="operation" onClick={handleInput}/>
+						<Button name="number" onClick={handleInput} value={"1"}/>
+						<Button name="number" onClick={handleInput} value={"2"}/>
+						<Button name="number" onClick={handleInput} value={"3"}/>
+						<Button name="operation" onClick={handleInput} value={"+"}/>
 					</div>
 					<div id="buttons" className="button-row">
-						<Button name="number zero" onClick={handleInput}/>
-						<Button name="number" onClick={handleInput}/>
-						<Button name="operation" onClick={handleInput}/>
+						<Button name="number zero" onClick={handleInput} value={"0"}/>
+						<Button name="number" onClick={handleInput} value={"."}/>
+						<Button name="operation" onClick={handleInput} value={"="}/>
 					</div>
 				</main>
 				<footer>
